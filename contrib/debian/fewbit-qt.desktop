@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=FewBit Core
+Comment=FewBit P2P Cryptocurrency
+Comment[de]=Verbinde mit dem FewBit peer-to-peer Netzwerk
+Comment[fr]=FewBit, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=FewBit, eşten eşe kriptografik sanal para birimi
+Exec=fewbit-qt %u
+Terminal=false
+Type=Application
+Icon=fewbit128
+MimeType=x-scheme-handler/fewbit;
+Categories=Office;Finance;

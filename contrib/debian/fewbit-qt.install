@@ -1,0 +1,6 @@
+usr/local/bin/fewbit-qt usr/bin
+share/pixmaps/fewbit32.xpm usr/share/pixmaps
+share/pixmaps/fewbit16.xpm usr/share/pixmaps
+share/pixmaps/fewbit128.png usr/share/pixmaps
+debian/fewbit-qt.desktop usr/share/applications
+debian/fewbit-qt.protocol usr/share/kde4/services/

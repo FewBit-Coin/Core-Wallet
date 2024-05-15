@@ -1,0 +1,22 @@
+[Unit]
+Description=FewBit's distributed currency daemon
+After=network.target
+
+[Service]
+User=fewbitcore
+Group=fewbitcore
+
+Type=forking
+PIDFile=/var/lib/fewbitd/fewbitd.pid
+ExecStart=/usr/bin/fewbitd -daemon -pid=/var/lib/fewbitd/fewbitd.pid \
+-conf=/etc/fewbitcore/fewbit.conf -datadir=/var/lib/fewbitd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/fewbit_ar.qm</file>
+        <file alias="bg">locale/fewbit_bg.qm</file>
+        <file alias="de">locale/fewbit_de.qm</file>
+        <file alias="en">locale/fewbit_en.qm</file>
+        <file alias="es">locale/fewbit_es.qm</file>
+        <file alias="fi">locale/fewbit_fi.qm</file>
+        <file alias="fr">locale/fewbit_fr.qm</file>
+        <file alias="it">locale/fewbit_it.qm</file>
+        <file alias="ja">locale/fewbit_ja.qm</file>
+        <file alias="ko">locale/fewbit_ko.qm</file>
+        <file alias="nl">locale/fewbit_nl.qm</file>
+        <file alias="pl">locale/fewbit_pl.qm</file>
+        <file alias="pt">locale/fewbit_pt.qm</file>
+        <file alias="ro">locale/fewbit_ro.qm</file>
+        <file alias="ru">locale/fewbit_ru.qm</file>
+        <file alias="sk">locale/fewbit_sk.qm</file>
+        <file alias="th">locale/fewbit_th.qm</file>
+        <file alias="tr">locale/fewbit_tr.qm</file>
+        <file alias="vi">locale/fewbit_vi.qm</file>
+        <file alias="zh_CN">locale/fewbit_zh_CN.qm</file>
+        <file alias="zh_TW">locale/fewbit_zh_TW.qm</file>
+    </qresource>
+</RCC>

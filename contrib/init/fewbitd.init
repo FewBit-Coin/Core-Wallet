@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  fewbitd The FewBit Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: fewbitd
+# processname: fewbitd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/fewbitd, see below
+if [ -f /etc/sysconfig/fewbitd ]; then
+    . /etc/sysconfig/fewbitd
+fi
+
+RETVAL=0
+
+prog=fewbitd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/fewbitd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/fewbitd}
+
+# fewbitd defaults to /usr/bin/fewbitd, override with BITCOIND_BIN
+fewbitd=${BITCOIND_BIN-/usr/bin/fewbitd}
+
+# fewbitd opts default to -disablewallet, override with BITCOIND_OPTS
+fewbitd_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $fewbitd $fewbitd_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+start)
+    start
+    ;;
+stop)
+    stop
+    ;;
+status)
+    status $prog
+    ;;
+restart)
+    stop
+    start
+    ;;
+*)
+    echo "Usage: service $prog {start|stop|status|restart}"
+    exit 1
+    ;;
+esac
